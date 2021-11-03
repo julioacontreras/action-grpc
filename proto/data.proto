@@ -1,0 +1,16 @@
+syntax="proto3";
+package appPackage;
+
+service AppService {
+  rpc sendToService (AppRequestService) returns (AppResponseService);
+}
+
+message AppRequestService {
+  string action = 1;
+  string data = 2;
+  string token = 3;
+}
+
+message AppResponseService {
+  string data = 1;
+}
